@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => MyHomePage(),
         '/second': (context) => SecondScreen(),
+        '/third': (context) => ThirdScreen(),
       },
     );
   }
@@ -76,7 +77,8 @@ class MyHomePage extends StatelessWidget {
                             borderSide: BorderSide.none,
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           ),
-                          contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                          contentPadding: EdgeInsets.symmetric(
+                              vertical: 12, horizontal: 16),
                         ),
                         style: TextStyle(color: Colors.black),
                       ),
@@ -94,7 +96,8 @@ class MyHomePage extends StatelessWidget {
                             borderSide: BorderSide.none,
                             borderRadius: BorderRadius.all(Radius.circular(10)),
                           ),
-                          contentPadding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                          contentPadding: EdgeInsets.symmetric(
+                              vertical: 12, horizontal: 16),
                         ),
                         style: TextStyle(color: Colors.black),
                       ),
@@ -110,7 +113,9 @@ class MyHomePage extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/third');
+                  },
                   child: Text('Admin Log in'),
                 ),
               ],
@@ -143,7 +148,6 @@ class _SecondScreenState extends State<SecondScreen> {
     'VISA support',
     'Money you need',
     'Documents you\'ll need to apply',
-
   ];
 
   final List<String> _details = [
@@ -159,7 +163,6 @@ class _SecondScreenState extends State<SecondScreen> {
     'Details about VISA support',
     'Details about Money you need',
     'Details about Documents you\'ll need to apply',
-
   ];
 
   void _onItemTapped(int index) {
@@ -230,4 +233,89 @@ class _SecondScreenState extends State<SecondScreen> {
   }
 }
 
+class ThirdScreen extends StatefulWidget {
+  @override
+  _ThirdScreenState createState() => _ThirdScreenState();
+}
 
+class _ThirdScreenState extends State<ThirdScreen> {
+  String _selectedOption = '';
+
+  void _onOptionSelected(String option) {
+    setState(() {
+      _selectedOption = option;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
+        title: Text('Admin Portal'),
+      ),
+      body: Row(
+        children: [
+          Expanded(
+            child: Container(
+              color: Colors.grey.shade100,
+              child: ListView(
+                children: [
+                  ListTile(
+                    title: Text('Applications'),
+                    onTap: () => _onOptionSelected('Applications'),
+                  ),
+                  ListTile(
+                    title: Text('Conditional letter'),
+                    onTap: () => _onOptionSelected('Conditional letter'),
+                  ),
+                  ListTile(
+                    title: Text('Unconditional letter'),
+                    onTap: () => _onOptionSelected('Unconditional letter'),
+                  ),
+                  ListTile(
+                    title: Text('Tuition Fee Records'),
+                    onTap: () => _onOptionSelected('Tuition Fee Records'),
+                  ),
+                  ListTile(
+                    title: Text('CAS Portal'),
+                    onTap: () => _onOptionSelected('CAS Portal'),
+                  ),
+                  ListTile(
+                    title: Text('Doocuments'),
+                    onTap: () => _onOptionSelected('Documents'),
+                  ),
+                  ListTile(
+                    title: Text('Interview Status'),
+                    onTap: () => _onOptionSelected('Interview Status'),
+                  ),
+                  ListTile(
+                    title: Text('CAS status'),
+                    onTap: () => _onOptionSelected('CAS status'),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              color: Colors.white,
+              child: Center(
+                child: Text(
+                  _selectedOption.isNotEmpty
+                      ? 'Details for $_selectedOption'
+                      : 'Please select an option',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
