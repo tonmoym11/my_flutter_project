@@ -148,7 +148,7 @@ class _SecondScreenState extends State<SecondScreen> {
     'VISA support',
     'Money you need',
     'Documents you\'ll need to apply',
-  ];
+    'Important Dates',  ];
 
   final List<String> _details = [
     'Details about Application status',
@@ -163,7 +163,7 @@ class _SecondScreenState extends State<SecondScreen> {
     'Details about VISA support',
     'Details about Money you need',
     'Details about Documents you\'ll need to apply',
-  ];
+    'Details about Important Dates',  ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -233,6 +233,7 @@ class _SecondScreenState extends State<SecondScreen> {
   }
 }
 
+
 class ThirdScreen extends StatefulWidget {
   @override
   _ThirdScreenState createState() => _ThirdScreenState();
@@ -262,34 +263,37 @@ class _ThirdScreenState extends State<ThirdScreen> {
               child: ListView(
                 children: [
                   ListTile(
+                    leading: Icon(Icons.assignment),
                     title: Text('Applications'),
                     onTap: () => _onOptionSelected('Applications'),
                   ),
                   ListTile(
+                    leading: Icon(Icons.description),
                     title: Text('Conditional letter'),
                     onTap: () => _onOptionSelected('Conditional letter'),
                   ),
                   ListTile(
+                    leading: Icon(Icons.description),
                     title: Text('Unconditional letter'),
                     onTap: () => _onOptionSelected('Unconditional letter'),
                   ),
                   ListTile(
+                    leading: Icon(Icons.monetization_on),
                     title: Text('Tuition Fee Records'),
                     onTap: () => _onOptionSelected('Tuition Fee Records'),
                   ),
                   ListTile(
-                    title: Text('CAS Portal'),
-                    onTap: () => _onOptionSelected('CAS Portal'),
-                  ),
-                  ListTile(
-                    title: Text('Doocuments'),
+                    leading: Icon(Icons.attach_file),
+                    title: Text('Documents'),
                     onTap: () => _onOptionSelected('Documents'),
                   ),
                   ListTile(
+                    leading: Icon(Icons.check_circle),
                     title: Text('Interview Status'),
                     onTap: () => _onOptionSelected('Interview Status'),
                   ),
                   ListTile(
+                    leading: Icon(Icons.check_circle),
                     title: Text('CAS status'),
                     onTap: () => _onOptionSelected('CAS status'),
                   ),
