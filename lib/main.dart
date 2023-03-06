@@ -297,6 +297,11 @@ class _ThirdScreenState extends State<ThirdScreen> {
                     title: Text('CAS status'),
                     onTap: () => _onOptionSelected('CAS status'),
                   ),
+                  ListTile(
+                    leading: Icon(Icons.document_scanner_outlined),
+                    title: Text('Visa Records'),
+                    onTap:() => _onOptionSelected('Visa Records'),
+                  )
                 ],
               ),
             ),
