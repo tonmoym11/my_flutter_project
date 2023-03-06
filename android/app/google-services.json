@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "397425488227",
+    "project_id": "lsbu-int-std-portal",
+    "storage_bucket": "lsbu-int-std-portal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397425488227:android:5592c3c8bce3231bdea356",
+        "android_client_info": {
+          "package_name": "com.example.lsbu_portal_web_portal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "397425488227-lgtustrsh5iok6er068pljc70pk5ov5t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGjsMSb-r_c3Cdu7bM2ao1emewempJueE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "397425488227-lgtustrsh5iok6er068pljc70pk5ov5t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
