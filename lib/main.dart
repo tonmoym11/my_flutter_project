@@ -145,9 +145,9 @@ class _SecondScreenState extends State<SecondScreen> {
     'Schedule interview',
     'Interview status',
     'CAS status',
-    'VISA support',
-    'Money you need',
     'Documents you\'ll need to apply',
+    'Money you need',
+    'VISA support',
     'Important Dates',  ];
 
   final List<String> _details = [
@@ -160,9 +160,9 @@ class _SecondScreenState extends State<SecondScreen> {
     'Details about Schedule interview',
     'Details about Interview status',
     'Details about CAS status',
-    'Details about VISA support',
-    'Details about Money you need',
     'Details about Documents you\'ll need to apply',
+    'Details about Money you need',
+    'Details about VISA support',
     'Details about Important Dates',  ];
 
   void _onItemTapped(int index) {
