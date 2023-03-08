@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
+Future<void> main() async {
   runApp(MyApp());
 }
 
@@ -18,7 +18,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
 class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -109,7 +108,7 @@ class MyHomePage extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(context, '/second');
                   },
-                  child: Text('Sign in'),
+                  child: Text('Student Log in'),
                 ),
                 SizedBox(height: 20),
                 ElevatedButton(
